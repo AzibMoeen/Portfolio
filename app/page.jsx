@@ -1,7 +1,7 @@
 
 'use client'
-import a from "next/a"
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenua } from "@/components/ui/navigation-menu"
+import Link from "next/link"
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
@@ -11,8 +11,8 @@ import { useState } from "react"
 import { Textarea } from "@/components/ui/textarea"
 import { useRouter } from "next/router"
 export default function Home() {
-  const router = useRouter
-  const handleNavaClick = (event, targetId) => {
+
+  const handleNavLinkClick = (event, targetId) => {
     event.preventDefault()
     const targetElement = document.getElementById(targetId)
     if (targetElement) {
@@ -27,48 +27,48 @@ export default function Home() {
     <div className="flex min-h-[100dvh] flex-col">
       <header className="sticky top-0 z-50 w-full bg-background">
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="/about" className="flex items-center gap-2" prefetch={false}>
+          <Link href="/about" className="flex items-center gap-2" prefetch={false}>
             <CodeIcon className="h-6 w-6" />
             <span className="text-lg font-bold">Azib Moeen</span>
-          </a>
+          </Link>
           <nav className="hidden sm:flex">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenua
+                  <NavigationMenuLink
                     href="#intro"
-                    onClick={(event) => handleNavaClick(event, "intro")}
+                    onClick={(event) => handleNavLinkClick(event, "intro")}
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline focus:underline focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:underline data-[state=open]:underline"
                   >
                     Intro
-                  </NavigationMenua>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenua
+                  <NavigationMenuLink
                     href="#projects"
-                    onClick={(event) => handleNavaClick(event, "projects")}
+                    onClick={(event) => handleNavLinkClick(event, "projects")}
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline focus:underline focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:underline data-[state=open]:underline"
                   >
                     Projects
-                  </NavigationMenua>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenua
+                  <NavigationMenuLink
                     href="#services"
-                    onClick={(event) => handleNavaClick(event, "services")}
+                    onClick={(event) => handleNavLinkClick(event, "services")}
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline focus:underline focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:underline data-[state=open]:underline"
                   >
                     Services
-                  </NavigationMenua>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenua
+                  <NavigationMenuLink
                     href="#contact"
-                    onClick={(event) => handleNavaClick(event, "contact")}
+                    onClick={(event) => handleNavLinkClick(event, "contact")}
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline focus:underline focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:underline data-[state=open]:underline"
                   >
                     Contact
-                  </NavigationMenua>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -82,38 +82,38 @@ export default function Home() {
             </SheetTrigger>
             <SheetContent side="left">
               <div className="grid gap-2 py-6">
-                <a
+                <Link
                   href="#"
-                  onClick={(event) => handleNavaClick(event, "intro")}
+                  onClick={(event) => handleNavLinkClick(event, "intro")}
                   className="flex w-full items-center py-2 text-lg font-semibold hover:underline focus:underline"
                   prefetch={false}
                 >
                   Intro
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
-                  onClick={(event) => handleNavaClick(event, "projects")}
+                  onClick={(event) => handleNavLinkClick(event, "projects")}
                   className="flex w-full items-center py-2 text-lg font-semibold hover:underline focus:underline"
                   prefetch={false}
                 >
                   Projects
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
-                  onClick={(event) => handleNavaClick(event, "services")}
+                  onClick={(event) => handleNavLinkClick(event, "services")}
                   className="flex w-full items-center py-2 text-lg font-semibold hover:underline focus:underline"
                   prefetch={false}
                 >
                   Services
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
-                  onClick={(event) => handleNavaClick(event, "contact")}
+                  onClick={(event) => handleNavLinkClick(event, "contact")}
                   className="flex w-full items-center py-2 text-lg font-semibold hover:underline focus:underline"
                   prefetch={false}
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>
