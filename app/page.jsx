@@ -178,14 +178,7 @@ export default function Home() {
                     real-time updates, and mobile-responsive design.
                   </p>
                   <div className="flex gap-2">
-                    <a
-                      href="https://www.azibtube.live/"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                      prefetch={false}
-                      target="blank"
-                    >
-                      Live Demo
-                    </a>
+                   
                     <a
                       href="https://github.com/AzibMoeen/Youtube-Clone"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
@@ -248,14 +241,7 @@ export default function Home() {
                   A scalable, social media platform built with the MERN stack. Features include user authentication, posting, liking, following, commenting, messaging, and advanced search capabilities. The application offers a seamless and interactive user experience with real-time updates.
                   </p>
                   <div className="flex gap-2">
-                    <a
-                      href="#"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                      prefetch={false}
-                      target="blank"
-                    >
-                      Live Demo
-                    </a>
+                   
                     <a
                       href="https://github.com/AzibMoeen/Social-Media"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
