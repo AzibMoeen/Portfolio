@@ -1,7 +1,7 @@
 
 'use client'
-import Link from "next/link"
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu"
+import a from "next/a"
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenua } from "@/components/ui/navigation-menu"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
@@ -9,8 +9,10 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
 import { Textarea } from "@/components/ui/textarea"
+import { useRouter } from "next/router"
 export default function Home() {
-  const handleNavLinkClick = (event, targetId) => {
+  const router = useRouter
+  const handleNavaClick = (event, targetId) => {
     event.preventDefault()
     const targetElement = document.getElementById(targetId)
     if (targetElement) {
@@ -25,48 +27,48 @@ export default function Home() {
     <div className="flex min-h-[100dvh] flex-col">
       <header className="sticky top-0 z-50 w-full bg-background">
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Link href="#" className="flex items-center gap-2" prefetch={false}>
+          <a href="/about" className="flex items-center gap-2" prefetch={false}>
             <CodeIcon className="h-6 w-6" />
             <span className="text-lg font-bold">Azib Moeen</span>
-          </Link>
+          </a>
           <nav className="hidden sm:flex">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuLink
+                  <NavigationMenua
                     href="#intro"
-                    onClick={(event) => handleNavLinkClick(event, "intro")}
+                    onClick={(event) => handleNavaClick(event, "intro")}
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline focus:underline focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:underline data-[state=open]:underline"
                   >
                     Intro
-                  </NavigationMenuLink>
+                  </NavigationMenua>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuLink
+                  <NavigationMenua
                     href="#projects"
-                    onClick={(event) => handleNavLinkClick(event, "projects")}
+                    onClick={(event) => handleNavaClick(event, "projects")}
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline focus:underline focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:underline data-[state=open]:underline"
                   >
                     Projects
-                  </NavigationMenuLink>
+                  </NavigationMenua>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuLink
+                  <NavigationMenua
                     href="#services"
-                    onClick={(event) => handleNavLinkClick(event, "services")}
+                    onClick={(event) => handleNavaClick(event, "services")}
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline focus:underline focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:underline data-[state=open]:underline"
                   >
                     Services
-                  </NavigationMenuLink>
+                  </NavigationMenua>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuLink
+                  <NavigationMenua
                     href="#contact"
-                    onClick={(event) => handleNavLinkClick(event, "contact")}
+                    onClick={(event) => handleNavaClick(event, "contact")}
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:underline focus:underline focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:underline data-[state=open]:underline"
                   >
                     Contact
-                  </NavigationMenuLink>
+                  </NavigationMenua>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -80,38 +82,38 @@ export default function Home() {
             </SheetTrigger>
             <SheetContent side="left">
               <div className="grid gap-2 py-6">
-                <Link
+                <a
                   href="#"
-                  onClick={(event) => handleNavLinkClick(event, "intro")}
+                  onClick={(event) => handleNavaClick(event, "intro")}
                   className="flex w-full items-center py-2 text-lg font-semibold hover:underline focus:underline"
                   prefetch={false}
                 >
                   Intro
-                </Link>
-                <Link
+                </a>
+                <a
                   href="#"
-                  onClick={(event) => handleNavLinkClick(event, "projects")}
+                  onClick={(event) => handleNavaClick(event, "projects")}
                   className="flex w-full items-center py-2 text-lg font-semibold hover:underline focus:underline"
                   prefetch={false}
                 >
                   Projects
-                </Link>
-                <Link
+                </a>
+                <a
                   href="#"
-                  onClick={(event) => handleNavLinkClick(event, "services")}
+                  onClick={(event) => handleNavaClick(event, "services")}
                   className="flex w-full items-center py-2 text-lg font-semibold hover:underline focus:underline"
                   prefetch={false}
                 >
                   Services
-                </Link>
-                <Link
+                </a>
+                <a
                   href="#"
-                  onClick={(event) => handleNavLinkClick(event, "contact")}
+                  onClick={(event) => handleNavaClick(event, "contact")}
                   className="flex w-full items-center py-2 text-lg font-semibold hover:underline focus:underline"
                   prefetch={false}
                 >
                   Contact
-                </Link>
+                </a>
               </div>
             </SheetContent>
           </Sheet>
@@ -176,22 +178,22 @@ export default function Home() {
                     real-time updates, and mobile-responsive design.
                   </p>
                   <div className="flex gap-2">
-                    <Link
+                    <a
                       href="https://www.azibtube.live/"
                       className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                       target="blank"
                     >
                       Live Demo
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="https://github.com/AzibMoeen/Youtube-Clone"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                       target="blank"
                     >
                       GitHub
-                    </Link>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -212,20 +214,20 @@ export default function Home() {
                   A full-stack e-commerce website built with React, Node.js, and MongoDB. Features include product listings, user authentication, shopping cart, order management, and payment processing. It offers a responsive design, real-time search, and admin dashboard for managing products and orders.
                   </p>
                   <div className="flex gap-2">
-                    <Link
+                    <a
                       href="#"
                       className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       Live Demo
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="#"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       GitHub
-                    </Link>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -246,14 +248,14 @@ export default function Home() {
                   A scalable, social media platform built with the MERN stack. Features include user authentication, posting, liking, following, commenting, messaging, and advanced search capabilities. The application offers a seamless and interactive user experience with real-time updates.
                   </p>
                   <div className="flex gap-2">
-                    <Link
+                    <a
                       href="#"
                       className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                       target="blank"
                     >
                       Live Demo
-                    </Link>
+                    </a>
                     <a
                       href="https://github.com/AzibMoeen/Social-Media"
                       className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
