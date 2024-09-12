@@ -133,7 +133,7 @@ export default function Home() {
                   efficient, and scalable code.
                 </p>
                 <div className="mt-6">
-                  <a href="/resume.pdf" download="Azib_Moeen_Resume.pdf" className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+                  <a href="/Resume.pdf" download="Azib_Moeen_Resume.pdf" className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
                     Download Resume
                   </a>
                 </div>
